@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DAMS — Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <header>
+            <h1 id="title">Dashboard</h1>
+            <div id="profile"></div>
+            <button id="logout">Logout</button>
+        </header>
+
+        <section id="content">
+            <!-- Role-based views will be injected here by JS -->
+            <nav>
+                <ul>
+                    <li><a href="/attendance.html">Attendance</a></li>
+                    <li><a href="/assignments.html">Assignments</a></li>
+                    <li><a href="/syllabus.html">Syllabus</a></li>
+                    <li><a href="/advisor.html">Advisor Requests</a></li>
+                    <li><a href="/admin.html">Admin (Authorized Emails)</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <script src="/dashboard.js"></script>
+</body>
+
+</html>

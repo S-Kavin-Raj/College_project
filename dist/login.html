@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Department Academic Management System - Login</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <h1>DAMS — Login</h1>
+
+        <form id="loginForm">
+            <label>Login Type
+                <select id="loginType" name="loginType">
+                    <option value="ADMIN">Admin</option>
+                    <option value="TEACHER">Teacher</option>
+                    <option value="STUDENT">Student</option>
+                </select>
+            </label>
+
+            <label>Email: <input type="email" id="email" required></label>
+            <label>Password: <input type="password" id="password" required></label>
+
+            <label>Department:
+                <select id="department" required>
+                    <option>BE CSE</option>
+                    <option>B.Tech AIDS</option>
+                    <option>BE AI-ML</option>
+                    <option>BE EEE</option>
+                    <option>BE ECE</option>
+                    <option>BE CCE</option>
+                </select>
+            </label>
+
+            <div id="yearContainer">
+                <label>Academic Year:
+                    <select id="academicYear">
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="teacherRoleContainer">
+                <label>Teacher Role:
+                    <select id="teacherRole">
+                        <option value="STAFF">Staff</option>
+                        <option value="ADVISOR">Class Advisor</option>
+                        <option value="CR">Class Representative (CR)</option>
+                    </select>
+                </label>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div id="msg"></div>
+    </main>
+
+    <script src="/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+import { defineConfig } from 'vite'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+export default defineConfig({
+  plugins: [
+    // The React and Tailwind plugins are both required for Make, even if
+    // Tailwind is not being actively used – do not remove them
+    react(),
+    tailwindcss(),
+  ],
+  resolve: {
+    alias: {
+      // Alias @ to the src directory
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  server: {
+    proxy: {
+      '/auth': 'http://localhost:4000',
+      '/attendance': 'http://localhost:4000',
+      '/admin': 'http://localhost:4000',
+      '/assignments': 'http://localhost:4000',
+      '/syllabus': 'http://localhost:4000',
+      '/advisor': 'http://localhost:4000',
+      '/classes': 'http://localhost:4000',
+    },
+  },
+})

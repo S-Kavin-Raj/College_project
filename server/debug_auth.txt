@@ -1,0 +1,6 @@
+DB: college_cse_db | Email: "student@cse.local" | Dept: BE CSE
+Result rows: 0
+User student@cse.local NOT FOUND
+DB: college_cse_db | Email: "student@cse.local" | Dept: BE CSE
+Result rows: 0
+User student@cse.local NOT FOUND

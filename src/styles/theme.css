@@ -1,0 +1,234 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #fafbfc;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #6366f1;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.008 264.53);
+  --secondary-foreground: #1e293b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e0e7ff;
+  --accent-foreground: #4338ca;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: transparent;
+  --input-background: #f8fafc;
+  --switch-background: #cbd5e1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #8b5cf6;
+  --chart-3: #ec4899;
+  --chart-4: #f59e0b;
+  --chart-5: #10b981;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #1e293b;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #6366f1;
+  
+  /* Enhanced design tokens */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: oklch(0.985 0 0);
+  --card: #1e293b;
+  --card-foreground: oklch(0.985 0 0);
+  --popover: #1e293b;
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #818cf8;
+  --primary-foreground: #0f172a;
+  --secondary: #334155;
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #334155;
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: #f87171;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: #334155;
+  --ring: #818cf8;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #818cf8;
+  --chart-2: #a78bfa;
+  --chart-3: #f472b6;
+  --chart-4: #fbbf24;
+  --chart-5: #34d399;
+  --sidebar: #1e293b;
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #818cf8;
+  --sidebar-primary-foreground: #0f172a;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #818cf8;
+  
+  /* Enhanced dark mode shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Enhanced scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--muted);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted-foreground);
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.8;
+  }
+  
+  /* Selection styling */
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}

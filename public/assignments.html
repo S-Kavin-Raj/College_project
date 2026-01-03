@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DAMS — Assignments</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <header>
+            <h1>Assignments</h1>
+            <div id="profile"></div>
+        </header>
+
+        <section>
+            <label>Class
+                <select id="classSelect"></select>
+            </label>
+
+            <div id="assignments"></div>
+
+            <div id="createForm" style="display:none;margin-top:16px;">
+                <h3>Create Assignment</h3>
+                <label>Title: <input id="title"></label>
+                <label>Due Date: <input id="due_date" type="date"></label>
+                <label>Description: <textarea id="description"></textarea></label>
+                <button id="createBtn">Create</button>
+            </div>
+
+            <div id="msg"></div>
+        </section>
+    </main>
+    <script src="/assignments.js"></script>
+</body>
+
+</html>
